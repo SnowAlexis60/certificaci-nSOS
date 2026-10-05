@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Menú</title>
+</head>
+
+<body>
+
+    <h1>Bienvenido, Miyagi</h1>
+
+    <a href="nueva_peli.html">Nueva Peli</a>
+    <a href="#">Cerrar sesión</a>
+
+    <h2>Películas</h2>
+
+    {% for pelicula in peliculas %}
+
+        <h3>{{ pelicula.nombre }}</h3>
+
+        <p><b>Director:</b> {{ pelicula.director }}</p>
+
+        <p><b>Fecha de estreno:</b> {{ pelicula.fecha }}</p>
+
+        <p><b>Sinopsis:</b> {{ pelicula.sinopsis }}</p>
+
+        <hr>
+
+    {% endfor %}
+
+</body>
+</html>
